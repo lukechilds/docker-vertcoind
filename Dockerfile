@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM debian:stable-slim
 MAINTAINER Luke Childs <lukechilds123@gmail.com>
 
 ADD ./bin /usr/local/bin
