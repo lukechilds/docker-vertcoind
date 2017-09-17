@@ -14,3 +14,5 @@ Vertcoin node.
 ```
 docker run -v /home/username/vertcoin:/data -p 8333:8333 lukechilds/vertcoind
 ```
+
+If there is a `vertcoin.conf` in the `/data` volume it will be used. If not, one will be created for you. A secure unique JSON-RPC password will also be generated.
