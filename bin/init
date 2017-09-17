@@ -13,4 +13,4 @@ rpcuser=rpc
 rpcpassword=`dd if=/dev/urandom bs=18 count=1 2>/dev/null | base64`" > "${CONF}"
 fi
 
-exec vertcoind -datadir=${DATA_DIR} -conf=${CONF}
+exec vertcoind -datadir=${DATA_DIR} -conf=${CONF} "$@"
