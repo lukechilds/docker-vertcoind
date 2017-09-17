@@ -1,0 +1,16 @@
+#!/bin/bash
+
+DATA_DIR=/data
+CONF=${DATA_DIR}/vertcoin.conf
+
+if [ ! -e "${CONF}" ]; then
+  echo "No vertcoin.conf found, creating one for you."
+  echo "disablewallet=1
+printtoconsole=1
+rpcport=8332
+rpcallowip=::/0
+rpcuser=rpc
+rpcpassword=`dd if=/dev/urandom bs=18 count=1 2>/dev/null | base64`" > "${CONF}"
+fi
+
+exec vertcoind -datadir=${DATA_DIR} -conf=${CONF}
