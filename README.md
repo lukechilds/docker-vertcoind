@@ -1,7 +1,7 @@
 
 # docker-vertcoind
 
-[![Docker Stars](https://img.shields.io/docker/stars/lukechilds/vertcoind.svg)](https://hub.docker.com/r/lukechilds/vertcoind/)
+[![Image Layers](https://images.microbadger.com/badges/image/lukechilds/vertcoind.svg)](https://microbadger.com/images/lukechilds/vertcoind)
 [![Docker Pulls](https://img.shields.io/docker/pulls/lukechilds/vertcoind.svg)](https://hub.docker.com/r/lukechilds/vertcoind/)
 
 > Run a full Vertcoin node with one command
