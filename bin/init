@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 DATA_DIR=/data
 CONF=${DATA_DIR}/vertcoin.conf
