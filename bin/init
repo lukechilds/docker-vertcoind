@@ -4,7 +4,6 @@ DATA_DIR=/data
 CONF=${DATA_DIR}/vertcoin.conf
 
 if [ ! -e "${CONF}" ]; then
-  echo "No vertcoin.conf found, creating one for you."
   echo "disablewallet=1
 printtoconsole=1
 rpcport=8332
