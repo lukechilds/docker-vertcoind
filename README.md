@@ -1,6 +1,7 @@
 
 # docker-vertcoind
 
+[![Build Status](https://travis-ci.org/lukechilds/docker-vertcoind.svg?branch=master)](https://travis-ci.org/lukechilds/docker-vertcoind)
 [![Image Layers](https://images.microbadger.com/badges/image/lukechilds/vertcoind.svg)](https://microbadger.com/images/lukechilds/vertcoind)
 [![Docker Pulls](https://img.shields.io/docker/pulls/lukechilds/vertcoind.svg)](https://hub.docker.com/r/lukechilds/vertcoind/)
 

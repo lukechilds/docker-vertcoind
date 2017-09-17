@@ -1,0 +1,7 @@
+sudo: required
+services:
+  - docker
+script: docker build -t vertcoind . && docker run vertcoind -version | grep -q "Vertcoin Core"
+notifications:
+  email:
+    on_success: never
