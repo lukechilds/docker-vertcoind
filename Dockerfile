@@ -11,6 +11,9 @@ RUN chmod a+x /usr/local/bin/* && \
     apk del curl unzip && \
     rm -rf /tmp/* /var/tmp/*
 
+RUN mkdir /lib64 && \
+    ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
+
 VOLUME ["/data"]
 ENV HOME /data
 WORKDIR /data
