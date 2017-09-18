@@ -1,7 +1,7 @@
 FROM debian:stable-slim
 LABEL maintainer="Luke Childs <lukechilds123@gmail.com>"
 
-ADD ./bin /usr/local/bin
+COPY ./bin /usr/local/bin
 
 RUN chmod a+x /usr/local/bin/* && \
     apt-get update && \
