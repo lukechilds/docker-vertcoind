@@ -2,11 +2,13 @@ FROM debian:stable-slim
 LABEL maintainer="Luke Childs <lukechilds123@gmail.com>"
 
 COPY ./bin /usr/local/bin
+COPY ./VERSION /tmp
 
-RUN chmod a+x /usr/local/bin/* && \
+RUN VERSION=`cat /tmp/VERSION` && \
+    chmod a+x /usr/local/bin/* && \
     apt-get update && \
     apt-get install -y --no-install-recommends curl ca-certificates unzip && \
-    curl -L https://github.com/vertcoin/vertcoin/releases/download/v0.11.1.0/vertcoin-v0.11.1.0-linux-64bit.zip --output /tmp/prebuilt.zip && \
+    curl -L https://github.com/vertcoin/vertcoin/releases/download/$VERSION/vertcoin-$VERSION-linux-64bit.zip --output /tmp/prebuilt.zip && \
     unzip /tmp/prebuilt.zip -d /tmp && \
     mv /tmp/vertcoind /usr/local/bin && \
     apt-get purge -y curl ca-certificates unzip && \

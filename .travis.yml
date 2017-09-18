@@ -1,7 +1,7 @@
 sudo: required
 services:
   - docker
-script: docker build -t vertcoind . && (docker run vertcoind -version; docker run vertcoind -version | grep -q "Vertcoin Core")
+script: docker build -t vertcoind . && ( docker run vertcoind -version | tee /dev/stderr | grep -q $(cat VERSION) ) 2>&1
 notifications:
   email:
     on_success: never
