@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM frolvlad/alpine-glibc:alpine-3.6
 MAINTAINER Luke Childs <lukechilds123@gmail.com>
 
 ADD ./bin /usr/local/bin
@@ -10,9 +10,6 @@ RUN chmod a+x /usr/local/bin/* && \
     mv /tmp/vertcoind /usr/local/bin && \
     apk del curl unzip && \
     rm -rf /tmp/* /var/tmp/*
-
-RUN mkdir /lib64 && \
-    ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
 
 VOLUME ["/data"]
 ENV HOME /data
