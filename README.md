@@ -16,7 +16,7 @@ Vertcoin node.
 docker run -v /home/username/vertcoin:/data -p 8333:8333 lukechilds/vertcoind
 ```
 
-If there is a `vertcoin.conf` in the `/data` volume it will be used. If not, one will be created for you. A secure unique JSON-RPC password will also be generated.
+If there's a `vertcoin.conf` in the `/data` volume it'll be used. If not, one will be created for you with a randomly generated JSON-RPC password.
 
 ### JSON-RPC
 
@@ -30,10 +30,13 @@ docker run -v /home/username/vertcoin:/data -p 8333:8333 -p 127.0.0.1:8332:8332 
 
 All CLI arguments are passed directly through to vertcoind.
 
-You can use this to configure via cli without a config:
+You can use this to configure via CLI args without a config file:
 
 ```
-docker run -v /home/username/vertcoin:/data -p 8333:8333 -p 127.0.0.1:8332:8332 lukechilds/vertcoind -rpcuser=jonsnow -rpcpassword=ikn0wnothin
+docker run -v /home/username/vertcoin:/data \
+  -p 8333:8333 \
+  -p 127.0.0.1:8332:8332 \
+  lukechilds/vertcoind -rpcuser=jonsnow -rpcpassword=ikn0wnothin
 ```
 
 Or just use the container like a vertcoind binary:
