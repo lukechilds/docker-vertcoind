@@ -1,5 +1,5 @@
 FROM debian:stable-slim
-MAINTAINER Luke Childs <lukechilds123@gmail.com>
+LABEL maintainer="Luke Childs <lukechilds123@gmail.com>"
 
 ADD ./bin /usr/local/bin
 
