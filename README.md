@@ -60,6 +60,14 @@ OpenSSL Toolkit <https://www.openssl.org> and cryptographic software written by
 Eric Young and UPnP software written by Thomas Bernard.
 ```
 
+### Version
+
+You can also run a specific version of vertcoind if you want.
+
+```
+docker run -v /home/username/vertcoin:/data -p 8333:8333 lukechilds/vertcoind:v0.11.1.0
+```
+
 ## License
 
 MIT © Luke Childs
