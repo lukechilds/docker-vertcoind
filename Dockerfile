@@ -18,6 +18,7 @@ RUN VERSION=`cat /tmp/VERSION` && \
 
 VOLUME ["/data"]
 ENV HOME /data
+ENV DATA /data
 WORKDIR /data
 
 EXPOSE 8332 8333
