@@ -13,17 +13,17 @@ Vertcoin node.
 ## Usage
 
 ```
-docker run -v /home/username/vertcoin:/data -p 8333:8333 lukechilds/vertcoind
+docker run -v /home/username/vertcoin:/data -p 5889:5889 lukechilds/vertcoind
 ```
 
 If there's a `vertcoin.conf` in the `/data` volume it'll be used. If not, one will be created for you with a randomly generated JSON-RPC password.
 
 ### JSON-RPC
 
-To access JSON-RPC you'll also need to expose port 8332. You probably only want this available to localhost:
+To access JSON-RPC you'll also need to expose port 5888. You probably only want this available to localhost:
 
 ```
-docker run -v /home/username/vertcoin:/data -p 8333:8333 -p 127.0.0.1:8332:8332 lukechilds/vertcoind
+docker run -v /home/username/vertcoin:/data -p 5889:5889 -p 127.0.0.1:5888:5888 lukechilds/vertcoind
 ```
 
 ### CLI Arguments
@@ -34,8 +34,8 @@ You can use this to configure via CLI args without a config file:
 
 ```
 docker run -v /home/username/vertcoin:/data \
-  -p 8333:8333 \
-  -p 127.0.0.1:8332:8332 \
+  -p 5889:5889 \
+  -p 127.0.0.1:5888:5888 \
   lukechilds/vertcoind -rpcuser=jonsnow -rpcpassword=ikn0wnothin
 ```
 
@@ -65,7 +65,7 @@ Eric Young and UPnP software written by Thomas Bernard.
 You can also run a specific version of vertcoind if you want.
 
 ```
-docker run -v /home/username/vertcoin:/data -p 8333:8333 lukechilds/vertcoind:v0.11.1.0
+docker run -v /home/username/vertcoin:/data -p 5889:5889 lukechilds/vertcoind:v0.11.1.0
 ```
 
 ## License

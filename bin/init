@@ -5,7 +5,8 @@ CONF=${DATA}/vertcoin.conf
 if [ ! -e "${CONF}" ]; then
   echo "disablewallet=1
 printtoconsole=1
-rpcport=8332
+port=5889
+rpcport=5888
 rpcallowip=::/0
 rpcuser=rpc
 rpcpassword=`dd if=/dev/urandom bs=18 count=1 2>/dev/null | base64`" > "${CONF}"
