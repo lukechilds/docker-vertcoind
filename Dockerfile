@@ -1,5 +1,5 @@
 FROM debian:stable-slim
-LABEL maintainer="Gert-Jaap Glasbergen <gertjaap@gertjaap.org>"
+LABEL maintainer="Luke Childs <lukechilds123@gmail.com>"
 
 COPY ./bin /usr/local/bin
 COPY ./VERSION /tmp
