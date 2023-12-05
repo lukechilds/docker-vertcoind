@@ -1,4 +1,5 @@
 FROM debian:stable-slim
+LABEL maintainer="Luke Childs <lukechilds123@gmail.com>"
 
 COPY ./bin /usr/local/bin
 COPY ./VERSION /tmp
